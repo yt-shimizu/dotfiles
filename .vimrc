@@ -1,0 +1,10 @@
+" dein.vim
+source ~/dotfiles/.vimrc.dein
+" Basic
+source ~/dotfiles/.vimrc.basic
+" Colorscheme
+source ~/dotfiles/.vimrc.color
+" Keymap
+source ~/dotfiles/.vimrc.mapping
+" Plugin
+source ~/dotfiles/.vimrc.plugins

@@ -1,0 +1,42 @@
+" Normal
+noremap j gj
+noremap k gk
+noremap <S-h> ^
+noremap <S-j> }
+noremap <S-k> {
+noremap <S-l> $
+" ;でコマンド入力
+noremap ; :
+noremap : ;
+"検索結果ハイライトをEsc二回押しで消す
+noremap <Esc><Esc> :nohlsearch<CR><Esc>
+" Insert
+inoremap <C-e> <END>
+inoremap <C-a> <HOME>
+inoremap <C-d> <Del>
+inoremap <C-j> <Down>
+inoremap <C-k> <Up>
+inoremap <C-h> <Left>
+inoremap <C-l> <Right>
+inoremap <C-u>  <C-g>u<C-u>
+inoremap <C-w>  <C-g>u<C-w>
+" Normal+Visual
+nnoremap ZZ <Nop>
+nnoremap ZQ <Nop>
+nnoremap Q gq
+nnoremap <C-h> :<C-u>h<Space>
+" ctags
+" [tag jump] カーソルの単語の定義先にジャンプ（複数候補はリスト表示）
+nnoremap tj :exe("tjump ".expand('<cword>'))<CR>
+" [tag back] tag stack を戻る -> tp(tag pop)よりもtbの方がしっくりきた
+nnoremap tb :pop<CR>
+" [tag next] tag stack を進む
+nnoremap tn :tag<CR>
+" [tag vertical] 縦にウィンドウを分割してジャンプ
+nnoremap tv :vsp<CR> :exe("tjump ".expand('<cword>'))<CR>
+" [tag horizon] 横にウィンドウを分割してジャンプ
+nnoremap th :split<CR> :exe("tjump ".expand('<cword>'))<CR>
+" [tag tab] 新しいタブでジャンプ
+nnoremap tt :tab sp<CR> :exe("tjump ".expand('<cword>'))<CR>
+" [tags list] tag list を表示
+nnoremap tl :ts<CR>
