@@ -2,8 +2,6 @@ if status is-interactive
   # Commands to run in interactive sessions can go here
 
   # path
-  # Homebrew
-  eval (/opt/homebrew/bin/brew shellenv)
   # anyenv
   set -x PATH "$HOME/.anyenv/bin:$PATH"
   eval "$(anyenv init -)"
